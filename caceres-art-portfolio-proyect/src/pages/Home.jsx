@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import mainImgSrc from "../media/Wolverine.jpg";
+import mainImgSrc from "../media/handDrawing.jpg";
 import { Button, MainImg } from "./HomeStyles";
 import data from "../Data";
 
@@ -17,7 +17,6 @@ function Home() {
           key={index}
           src={item.url}
           alt={item.name}
-          /* borrar style */
           style={{ width: "100px", height: "auto", margin: "10px" }} // Estilo para tamaño pequeño
         />
       ))}

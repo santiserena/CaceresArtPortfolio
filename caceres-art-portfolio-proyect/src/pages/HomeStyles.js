@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 const MainImg = styled.img`
   width: 100%;
-  height: auto;
-  margin: 10px;
+  height: 250px;
+  object-fit: cover; /* borrar - Mantiene la relación de aspecto y recorta la imagen */
+  object-position: bottom; /* borrar - Alinea la imagen hacia arriba */
 `;
 
 const StyledButton = styled.button`

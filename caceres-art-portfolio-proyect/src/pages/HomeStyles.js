@@ -1,5 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+const MainImg = styled.img`
+  width: 100%;
+  height: auto;
+  margin: 10px;
+`;
 
 const StyledButton = styled.button`
   background-color: #007bff;
@@ -17,4 +22,4 @@ const Button = ({ children }) => {
   return <StyledButton>{children}</StyledButton>;
 };
 
-export default Button;
+export { MainImg, Button };

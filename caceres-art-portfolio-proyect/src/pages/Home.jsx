@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import mainImgSrc from "../media/handDrawing.jpg";
-import { Button, MainImg } from "./HomeStyles";
+import { MainTitle, MainImg } from "./HomeStyles";
 import data from "../Data";
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
 
   return (
     <div>
-      <h1>Portfolio de Emiliano C.</h1>
+      <MainTitle>Portfolio de Emiliano C.</MainTitle>
       <MainImg src={mainImgSrc} alt="mainImg" />
       {data.map((item, index) => (
         <img
@@ -20,7 +20,6 @@ function Home() {
           style={{ width: "100px", height: "auto", margin: "10px" }} // Estilo para tamaño pequeño
         />
       ))}
-      <Button />
     </div>
   );
 }

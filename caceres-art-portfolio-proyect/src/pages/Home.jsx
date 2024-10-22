@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
+
+import Header from "../components/Header";
+import About from "../components/About";
+import Gallery from "../components/Gallery";
+import Footer from "../components/Footer";
+
 import handDrawingDesktop from "../media/handDrawingDesktop.jpg";
 import handDrawingMobile from "../media/handDrawingMobile.jpg";
-import { MainTitle, MainImg } from "./HomeStyles";
-import data from "../Data";
+import { MainImg } from "./HomeStyles";
 
 function Home() {
-  
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -14,24 +18,27 @@ function Home() {
     } else {
       setIsMobile(false);
     }
-    console.log(data);
+    console.log("is mobile:", isMobile);
   }, []);
 
   return (
     <div>
-      <MainTitle>Portfolio</MainTitle>
+      <div style={{ border: "solid white 3px" }}>
+        <Header />
+      </div>
       <MainImg
         src={isMobile ? handDrawingMobile : handDrawingDesktop}
         alt="mainImg"
       />
-      {data.map((item, index) => (
-        <img
-          key={index}
-          src={item.url}
-          alt={item.name}
-          style={{ width: "100px", height: "auto", margin: "10px" }} // borrar estilo para tamaño pequeño
-        />
-      ))}
+      <div style={{ border: "solid blue 3px" }}>
+        <About />
+      </div>
+      <div style={{ border: "solid violet 3px" }}>
+        <Gallery />
+      </div>
+      <div style={{ border: "solid red 3px" }}>
+        <Footer />
+      </div>
     </div>
   );
 }

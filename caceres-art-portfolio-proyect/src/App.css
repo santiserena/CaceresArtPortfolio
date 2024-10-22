@@ -1,6 +1,12 @@
 /* general css */
-.App {
-  text-align: center;
+/* borrar - luego el background color ponerlo en app */
+html, body {
+  border: solid red 1px;
+  margin: 0;
+  padding: 0;
   background-color: rgb(16, 23, 31);
+}
+.App {
+  border: solid blue 1px;
 }
 

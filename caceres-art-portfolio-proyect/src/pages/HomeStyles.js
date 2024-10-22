@@ -2,13 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const MainTitle = styled.h1`
-  color: rgb(51, 62, 75);
+  color: rgb(232, 222, 222);
 `;
 const MainImg = styled.img`
   width: 100%;
-  height: 250px;
-  object-fit: cover; /* borrar - Mantiene la relación de aspecto y recorta la imagen */
-  object-position: bottom; /* borrar - Alinea la imagen hacia arriba */
+  height: auto;
 `;
 const StyledButton = styled.button`
   background-color: #007bff;

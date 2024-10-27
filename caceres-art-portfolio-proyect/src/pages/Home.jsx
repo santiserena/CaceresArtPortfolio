@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"; // Importa useEffect y useState para manejar el estado y efectos.
+import React, { useEffect, useState } from "react";
 
 import Header from "../components/Header";
 import About from "../components/About";
@@ -10,18 +10,30 @@ import handDrawingMobile from "../media/handDrawingMobile.jpg";
 import { MainImg } from "./HomeStyles";
 
 function Home() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [device, setDevice] = useState(
+    window.innerWidth <= 450
+      ? "mobile"
+      : window.innerWidth >= 450 && window.innerWidth <= 900
+      ? "tablet"
+      : "desktop"
+  );
 
   useEffect(() => {
-    // Función para actualizar isMobile:
+    // Función para actualizar device:
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 600);
+      setDevice(
+        window.innerWidth <= 450
+          ? "mobile"
+          : window.innerWidth >= 450 && window.innerWidth <= 900
+          ? "tablet"
+          : "desktop"
+      );
     };
 
-    // Agrega un event listener:
+    // Agrega event listener:
     window.addEventListener("resize", handleResize);
 
-    // Limpia el event listener al desmontar:
+    // Limpia event listener al desmontar:
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -29,11 +41,12 @@ function Home() {
 
   return (
     <div>
+      <p style={{ color: "white" }}>{device}</p>
       <div style={{ border: "solid white 3px" }}>
         <Header />
       </div>
       <MainImg
-        src={isMobile ? handDrawingMobile : handDrawingDesktop} // Selecciona la imagen según el estado de isMobile
+        src={device === "mobile" ? handDrawingMobile : handDrawingDesktop} // Selecciona la imagen según device
         alt="mainImg"
       />
       <div style={{ border: "solid blue 3px" }}>

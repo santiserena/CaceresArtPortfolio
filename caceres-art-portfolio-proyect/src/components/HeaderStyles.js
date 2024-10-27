@@ -10,7 +10,7 @@ const HeaderContainer = styled.div`
 
 /* icon and portfolio container */
 const TitleContainer = styled.div`
-  border: solid blue 2px;
+  border: solid var(--main-color) 2px;
   display: flex;
   flex-direction: row;
   align-items: center;

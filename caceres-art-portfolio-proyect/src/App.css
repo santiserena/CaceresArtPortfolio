@@ -1,5 +1,11 @@
 /* general css */
 /* borrar - luego el background color ponerlo en app */
+
+/* variables globales de estilos: */
+:root {
+  --main-color: green; /* -> variable */
+}
+
 html, body {
   border: solid red 1px;
   margin: 0;

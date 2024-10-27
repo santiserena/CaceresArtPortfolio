@@ -17,6 +17,14 @@ import {
 function Header() {
   const deviceType = useSelector((state) => state.deviceTypeSt);
 
+  const MenuButtons = (
+    <>
+      <SliderBtn>About</SliderBtn>
+      <SliderBtn>Gallery</SliderBtn>
+      <SliderBtn>Contact</SliderBtn>
+    </>
+  );
+
   return (
     <div>
       <HeaderContainer>
@@ -25,11 +33,7 @@ function Header() {
           <MainTitle>Portfolio</MainTitle>
         </TitleContainer>
         {deviceType !== "mobile" && (
-          <MenuBtnsContainer>
-            <SliderBtn>About</SliderBtn>
-            <SliderBtn>Gallery</SliderBtn>
-            <SliderBtn>Contact</SliderBtn>
-          </MenuBtnsContainer>
+          <MenuBtnsContainer>{MenuButtons}</MenuBtnsContainer>
         )}
         <IconsContainer>
           <ContactIcon icon={faInstagram} />
@@ -37,11 +41,7 @@ function Header() {
         </IconsContainer>
       </HeaderContainer>
       {deviceType === "mobile" && (
-        <MenuBtnsContainerMobile>
-          <SliderBtn>About</SliderBtn>
-          <SliderBtn>Gallery</SliderBtn>
-          <SliderBtn>Contact</SliderBtn>
-        </MenuBtnsContainerMobile>
+        <MenuBtnsContainerMobile>{MenuButtons}</MenuBtnsContainerMobile>
       )}
     </div>
   );

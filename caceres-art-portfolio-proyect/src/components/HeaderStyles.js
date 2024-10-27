@@ -28,9 +28,18 @@ const MainTitle = styled.h1`
 `;
 
 /* contact buttons container */
-const ContactBtnsContainer = styled.div`
+const MenuBtnsContainer = styled.div`
   border: solid blue 2px;
   display: flex;
+  align-items: center;
+  color: rgb(232, 222, 222);
+`;
+
+/* contact buttons container */
+const MenuBtnsContainerMobile = styled.div`
+  border: solid violet 2px;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
   color: rgb(232, 222, 222);
 `;
@@ -58,7 +67,8 @@ export {
   StyledIcon,
   TitleContainer,
   MainTitle,
-  ContactBtnsContainer,
+  MenuBtnsContainer,
+  MenuBtnsContainerMobile,
   SliderBtn,
   IconsContainer,
   ContactIcon,

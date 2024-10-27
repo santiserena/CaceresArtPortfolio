@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"; // Importa useEffect y useState para manejar el estado y efectos.
 
 import Header from "../components/Header";
 import About from "../components/About";
@@ -13,13 +13,19 @@ function Home() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth <= 600) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-    console.log("is mobile:", isMobile);
-  }, []);
+    // Función para actualizar isMobile:
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600);
+    };
+
+    // Agrega un event listener:
+    window.addEventListener("resize", handleResize);
+
+    // Limpia el event listener al desmontar:
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // [] asegura que el efecto se ejecute solo al montar/desmontar
 
   return (
     <div>
@@ -27,7 +33,7 @@ function Home() {
         <Header />
       </div>
       <MainImg
-        src={isMobile ? handDrawingMobile : handDrawingDesktop}
+        src={isMobile ? handDrawingMobile : handDrawingDesktop} // Selecciona la imagen según el estado de isMobile
         alt="mainImg"
       />
       <div style={{ border: "solid blue 3px" }}>
@@ -42,4 +48,5 @@ function Home() {
     </div>
   );
 }
+
 export default Home;

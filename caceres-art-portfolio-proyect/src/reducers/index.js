@@ -1,14 +1,14 @@
-// src/reducers/index.js
+// reducers:
 const initialState = {
-  someValue: 0, // Inicializa una propiedad en el estado
+  deviceTypeSt: 'desktop', // Inicializa una propiedad en el estado
 };
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "UPDATE_VALUE":
+    case "UPDATE_DEVICE_TYPE":
       return {
         ...state, // Copia el estado actual
-        someValue: action.payload, // Actualiza someValue con el nuevo valor desde la acción
+        deviceTypeSt: action.payload, // Actualiza deviceTypeSt con el nuevo valor desde la acción
       };
     default:
       return state; // Retorna el estado sin cambios si no se reconoce la acción

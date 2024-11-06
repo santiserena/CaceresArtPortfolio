@@ -7,7 +7,7 @@ import {
   StyledIcon,
   TitleContainer,
   MainTitle,
-  MenuBtnsContainer,
+  MenuBtnsContainerDesktop,
   MenuBtnsContainerMobile,
   ContactIcon,
   SliderBtn,
@@ -33,7 +33,7 @@ function Header() {
           <MainTitle>Portfolio</MainTitle>
         </TitleContainer>
         {deviceType !== "mobile" && (
-          <MenuBtnsContainer>{MenuButtons}</MenuBtnsContainer>
+          <MenuBtnsContainerDesktop>{MenuButtons}</MenuBtnsContainerDesktop>
         )}
         <IconsContainer>
           <ContactIcon icon={faInstagram} />

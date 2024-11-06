@@ -10,7 +10,7 @@ const HeaderContainer = styled.div`
 
 /* icon and portfolio container */
 const TitleContainer = styled.div`
-  border: solid var(--main-color) 2px;
+  border: solid green 2px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -28,11 +28,12 @@ const MainTitle = styled.h1`
 `;
 
 /* contact buttons container */
-const MenuBtnsContainer = styled.div`
+const MenuBtnsContainerDesktop = styled.div`
   border: solid blue 2px;
   display: flex;
   align-items: center;
-  color: rgb(232, 222, 222);
+  justify-content: space-around;
+  width: 50%;
 `;
 
 /* contact buttons container */
@@ -45,7 +46,24 @@ const MenuBtnsContainerMobile = styled.div`
 `;
 
 const SliderBtn = styled.button`
-  background-color: yellow;
+  background-color: var(--themeColor);
+  color: white;
+  border: none;
+  &:hover {
+    color: yellow;
+  }
+  /* desktop */
+  font-size: 1.5vw;
+  /* tablet */
+  @media (max-width: 900px) {
+    font-size: 2.5vw;
+    color: pink;
+  }
+  /* mobile */
+  @media (max-width: 450px) {
+    font-size: 5vw;
+    color: aqua;
+  }
 `;
 
 /* icons container */
@@ -67,7 +85,7 @@ export {
   StyledIcon,
   TitleContainer,
   MainTitle,
-  MenuBtnsContainer,
+  MenuBtnsContainerDesktop,
   MenuBtnsContainerMobile,
   SliderBtn,
   IconsContainer,

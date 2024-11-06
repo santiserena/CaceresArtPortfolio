@@ -1,18 +1,17 @@
 /* general css */
-/* borrar - luego el background color ponerlo en app */
 
 /* variables globales de estilos: */
 :root {
-  --main-color: green; /* -> variable */
+  --themeColor: #0F1624;
 }
 
 html, body {
-  border: solid red 1px;
   margin: 0;
   padding: 0;
-  background-color: rgb(16, 23, 31);
+  background-color: var(--themeColor);
 }
+
 .App {
-  border: solid blue 1px;
+  border: solid yellowgreen 2px;
 }
 

@@ -12,9 +12,9 @@ root.render(
     <Provider store={store}>
       <App />
     </Provider>
-    ,
   </React.StrictMode>
 );
+// borrar
 // measuring performance:
 // more: https://bit.ly/CRA-vitals
 // reportWebVitals(console.log);

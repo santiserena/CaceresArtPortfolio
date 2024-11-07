@@ -7,11 +7,12 @@ import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
 
 import handDrawingDesktop from "../media/handDrawingDesktop.jpg";
+/* borrar - agregar imagen de tablet */
 import handDrawingMobile from "../media/handDrawingMobile.jpg";
 import { MainImg } from "./HomeStyles";
 
 function Home() {
-  // estado de redux:
+  // traigo estado de redux:
   const deviceType = useSelector((state) => state.deviceTypeSt);
   const dispatch = useDispatch(); // Inicializa dispatch
 

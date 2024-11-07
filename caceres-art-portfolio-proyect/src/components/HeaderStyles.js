@@ -19,7 +19,7 @@ const TitleContainer = styled.div`
 const StyledIcon = styled(FAIcon)`
   padding-left: 0.5em;
   padding-right: 0.2em;
-  font-size: 1.5rem; // size
+  font-size: 1rem; // size
   color: rgb(232, 222, 222);
 `;
 
@@ -33,7 +33,7 @@ const MenuBtnsContainerDesktop = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 50%;
+  width: 40%;
 `;
 
 /* contact buttons container */
@@ -67,17 +67,25 @@ const SliderBtn = styled.button`
 `;
 
 /* icons container */
-const IconsContainer = styled.div`
+const LanguageSettingContainer = styled.div`
   border: solid blue 2px;
   display: flex;
   align-items: center;
 `;
 
-const ContactIcon = styled(FAIcon)`
-  border: solid brown 2px;
-  font-size: 1.5rem; // size
-  color: rgb(232, 222, 222);
-  box-sizing: border-box;
+const Flag = styled.img`
+  margin-right: 7px;
+  filter: ${(props) => (props.selected ? "none" : "grayscale(80%)")};
+  border: ${(props) => (props.selected ? "1.5px solid white" : "none")};
+  /* desktop */
+  width: 4vw;
+  @media (max-width: 900px) {
+    width: 6.5vw;
+  }
+  /* mobile */
+  @media (max-width: 450px) {
+    width: 10vw;
+  }
 `;
 
 export {
@@ -88,6 +96,6 @@ export {
   MenuBtnsContainerDesktop,
   MenuBtnsContainerMobile,
   SliderBtn,
-  IconsContainer,
-  ContactIcon,
+  LanguageSettingContainer,
+  Flag,
 };
